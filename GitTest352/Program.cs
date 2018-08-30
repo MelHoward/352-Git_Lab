@@ -10,10 +10,14 @@ namespace GitTest352
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("I'm thinking of a number between 1 and 100");
+            Console.WriteLine("Enter a minimum and maximum value for the range the number will be drawn from");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("a: {0}, b: {1}", a, b);
+
 
             Random rand = new Random();
-            int randomNumber = rand.Next(0, 100);
+            int randomNumber = rand.Next(a, b);
 
             bool correct = false;
             int guesses = 0;
